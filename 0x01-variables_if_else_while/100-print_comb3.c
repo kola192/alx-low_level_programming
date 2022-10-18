@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	int i,d;
+	int i, d;
 	int n = 0;
 
 	while (n < 1)
@@ -16,9 +16,13 @@ int main(void)
 			for (d = i; d < 9; d++)
 			{
 				putchar(i + '0');
-                        	putchar(d + '1');
-                        	putchar(',');
-                        	putchar(' ');
+				putchar(d + '1');
+				if(i == 8)
+				{
+					continue;
+				}
+				putchar(',');
+				putchar(' ');
 			}
 		}
 
