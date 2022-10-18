@@ -17,7 +17,7 @@ int main(void)
 			{
 				putchar(i + '0');
 				putchar(d + '1');
-				if(i == 8)
+				if (i == 8)
 				{
 					continue;
 				}
