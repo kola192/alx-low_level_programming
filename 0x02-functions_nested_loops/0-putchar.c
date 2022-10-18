@@ -1,23 +1,19 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - Entry point
- * Return: 0
- */
+* main - entry point
+* Return:0
+*/
 int main(void)
 {
-	int prt_putchar(void);
+	char *sh = "_putchar";
 
-	prt_putchar();
+	while (*sh)
+	{
+		_putchar(*sh);
+		sh++;
+	}
+	_putchar('\n');
+
 	return (0);
-}
-
-/**
- * prt_putchar - programme that prints _putchar
- * Return: 1
- */
-int prt_putchar(void)
-{
-	printf("_putchar\n");
-	return (1);
 }
