@@ -1,22 +1,19 @@
 #include <stdio.h>
-
 /**
- * main - Entry point
+ * main - main block
+ * Description: Use `putchar` to print all letters but the letter 'q' and 'e'.
  * Return: 0
  */
 int main(void)
 {
-	char ch;
+	char c = 'a';
 
-	for (ch = 'a'; ch <= 'z'; ch++)
+	while (c <= 'z')
 	{
-		if (ch == 'q' || ch == 'e')
-		{
-			continue;
-		}
-		putchar(ch);
+		if (c != 'q' && c != 'e')
+			putchar(c);
+		c++;
 	}
-
 	putchar('\n');
 
 	return (0);
