@@ -1,39 +1,23 @@
 #include "main.h"
-#include "0-strcat.c"
-#include <string.h>
 /**
- * _strncat - concatenates two strings
- * at most 'n' bytes from src
- * src does not need to be null-terminated if it contains n or more bytes
- * @dest: first string
- * @src: string to be appended to dest
- * @n: bytes to be used from src
- * Return: dest+src
+ *_strncat - concatenate two strings but add inputted number of bytes
+ *@dest: string to be appended upon
+ *@src: string to be completed at end of dest
+ *@n:integer parameter to compare index to
+ *Return: returns new concatenated string
  */
 
 char *_strncat(char *dest, char *src, int n)
 {
-	int src_len = strlen(src);
-	int i;
 
-	/* make a pointer to point to the end of dest */
-	char *ptr = dest + strlen(dest);
+	int index = 0, dest_len = 0;
 
-	/* stack smashing protection */
-	if (n > src_len)
-	{
-		dest = _strcat(dest, src);
-		return (dest);
-	}
-	/* append characters from src to dest */
-	for (i = 0; i < n; i++, *ptr++)
-	{
-		*ptr = src[i];
-	}
+	while (dest[index++])
+		dest_len++;
 
-	/* null terminate src string if it has n or more bytes */
-	if (src_len < n)
-		*ptr = '\0';
+	for (index = 0; src[index] && index < n; index++)
+		dest[dest_len++] = src[index];
 
 	return (dest);
+
 }

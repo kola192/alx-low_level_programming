@@ -1,16 +1,16 @@
 #include "main.h"
 /**
-* _puts - print a string to stdout.
-* @str: pointer to array
-* Return:
-*/
+ *_puts - prints a string
+ * @str: string to print
+ *
+ * Description: prints a string
+ * On success: return the number of characters printed
+ */
+
 void _puts(char *str)
 {
-	int c;
+while (*str)
+_putchar(*str++);
 
-	for (c = 0; str[c] != '\0'; c++)
-	{
-		_putchar(str[c]);
-	}
-	_putchar('\n');
+_putchar('\n');
 }
